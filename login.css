@@ -1,0 +1,187 @@
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /* background: linear-gradient(350deg, #22c1c3 0%, #fdbb2d 100%); */
+    background: linear-gradient(353deg, #5ae3ff 0%, #fff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 500px;
+    padding: 50px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    /* background: linear-gradient(318deg, #f1ea9c 0%, #fff 100%); */
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.header {
+    margin: 0 0 50px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #1dbcbe;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.user-info {
+    position: relative;
+}
+
+.user-info input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #1dbcbe;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    outline: none;
+    margin-bottom: 30px;
+}
+
+.user-info label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: #1dbcbe;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.container .user-info input:focus~label,
+.container .user-info input:valid~label {
+    top: -20px;
+    left: 0;
+    color: rgba(0, 0, 0, .3);
+    font-size: 16px;
+}
+
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin: 0 34% 0;
+    padding: 10px 20px;
+    color: #1dbcbe;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 600px;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.button:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ade8f4,
+        0 0 25px #ade8f4,
+        0 0 50px #ade8f4,
+        0 0 100px #ade8f4;
+}
+
+.button span {
+    position: absolute;
+    display: block;
+}
+
+.button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: span1 1s linear infinite;
+}
+
+@keyframes span1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: span2 1s linear infinite;
+    animation-delay: .25s;
+}
+
+@keyframes span2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+
+.button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: span3 1s linear infinite;
+    animation-delay: .5s;
+}
+
+@keyframes span3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.button span:nth-child(4) {
+    bottom: -100%;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: span4 1s linear infinite;
+    animation-delay: .75s;
+}
+
+@keyframes span4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
